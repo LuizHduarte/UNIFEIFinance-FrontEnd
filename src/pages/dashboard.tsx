@@ -31,7 +31,7 @@ const optionsLine = {
   },
   xaxis: {
     labels: {
-      format: 'MM yyyy'
+      format: 'MM yyyy',
     },
 
     axisBorder: {
@@ -60,7 +60,6 @@ const optionsLine = {
     }
   }
 }
-
 const seriesLine = [
   {
     name: 'Minha Carteira',
@@ -87,17 +86,19 @@ const optionsPie = {
     width: 380,
   },
   labels: ['ETF', 'Multimercado', 'Renda Fixa', 'Ações'],
-  responsive: [{
-    breakpoint: 480,
-    options: {
-      chart: {
-        width: 200
-      },
-      legend: {
-        position: 'bottom'
-      }
-    }
-  }]
+  legend: {
+    show: true,
+    fontSize: '14px',
+    fontFamily: 'Roboto',
+    fontWeight: 400,
+    labels: {
+      colors: 'white',
+    },
+    itemMargin: {
+      vertical: 25
+    },
+  }
+
 }
 
 export default function Dashboard() {
