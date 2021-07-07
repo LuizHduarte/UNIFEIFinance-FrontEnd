@@ -31,13 +31,9 @@ const optionsLine = {
   },
   xaxis: {
     labels: {
-      datetimeFormatter: {
-        year: 'yyyy',
-        month: 'MMM \'yy',
-        day: 'dd MMM',
-        hour: 'HH:mm'
-      }
+      format: 'MM yyyy'
     },
+
     axisBorder: {
       color: theme.colors.gray[600]
     },
@@ -45,13 +41,13 @@ const optionsLine = {
       color: theme.colors.gray[600]
     },
     categories: [
-      '2021-03-18T00:00:00.000z',
-      '2021-04-18T00:00:00.000z',
-      '2021-05-18T00:00:00.000z',
-      '2021-06-18T00:00:00.000z',
-      '2021-07-18T00:00:00.000z',
-      '2021-08-18T00:00:00.000z',
-      '2021-09-18T00:00:00.000z',
+      '2021-03-18',
+      '2021-04-18',
+      '2021-05-18',
+      '2021-06-18',
+      '2021-07-18',
+      '2021-08-18',
+      '2021-09-18',
     ],
   },
   fill: {
