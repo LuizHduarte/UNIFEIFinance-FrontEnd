@@ -4,9 +4,7 @@ import { Sidebar } from "../components/Sidebar";
 import dynamic from "next/dynamic";
 
 
-const Chart = dynamic(() => import('react-apexcharts'),
-  { ssr: false }
-)
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
 
 const optionsLine = {
   chart: {
@@ -32,7 +30,14 @@ const optionsLine = {
     },
   },
   xaxis: {
-    type: 'datetime',
+    labels: {
+      datetimeFormatter: {
+        year: 'yyyy',
+        month: 'MMM \'yy',
+        day: 'dd MMM',
+        hour: 'HH:mm'
+      }
+    },
     axisBorder: {
       color: theme.colors.gray[600]
     },
@@ -84,7 +89,6 @@ const seriesPie = [44, 55, 13, 43]
 const optionsPie = {
   chart: {
     width: 380,
-    type: 'pie',
   },
   labels: ['ETF', 'Multimercado', 'Renda Fixa', 'Ações'],
   responsive: [{
