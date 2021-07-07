@@ -18,7 +18,7 @@ export function Sidebar() {
         <NavSection title="OPERAÇÕES">
           <NavLink icon={AiOutlinePlus} link="/Operations/Buy" color='green.400'>Comprar</NavLink>
           <NavLink icon={AiOutlineMinus} link="/Operations/Sell" color='red.400' >Vender</NavLink>
-          <NavLink icon={AiOutlineCloudUpload} link="/Operations/Import" color='white'>Importar</NavLink>
+          <NavLink icon={AiOutlineCloudUpload} link="#" color='white'>Importar</NavLink>
         </NavSection>
       </Stack>
     </Box>

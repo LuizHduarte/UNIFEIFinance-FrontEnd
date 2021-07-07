@@ -1,12 +1,13 @@
-import { Image } from '@chakra-ui/react'
+import { Image, Box } from '@chakra-ui/react'
 
 export function Logo() {
   return (
-    <Image
-      boxSize="260"
-      objectFit="cover"
-      src="logo.png"
-      alt="logo"
-    />
+    <Box boxSize="260">
+      <Image
+        objectFit="cover"
+        src='/logo.png'
+        alt="logo"
+      />
+    </Box>
   )
 }

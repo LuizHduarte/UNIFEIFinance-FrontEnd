@@ -1,5 +1,4 @@
 import { Flex } from "@chakra-ui/react"
-
 import { Anchors } from "../Header/Anchors"
 import { Logo } from "../Header/Logo"
 import { NotificationsNav } from "../Header/NotificationsNav"
@@ -20,6 +19,7 @@ export function Header() {
       flexDirection='row'
     >
       <Logo />
+
 
       <Anchors />
 

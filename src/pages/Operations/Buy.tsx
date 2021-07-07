@@ -8,12 +8,11 @@ import { InputQuantity } from "../../components/Form/InputQuantity";
 
 export default function BuyAction() {
   return (
-    <Box>
+    <Flex direction='column' h='100vh'>
       <Header />
 
       <Flex w='100%' my='6' maxWidth={1480} mx='auto' px='6' >
         <Sidebar />
-
         <Box flex='1' borderRadius={8} bg='gray.800' p='8'>
           <Heading size='lg' fontWeight='normal'>Realizar Compra</Heading>
 
@@ -42,6 +41,6 @@ export default function BuyAction() {
           </Flex>
         </Box>
       </Flex>
-    </Box>
+    </Flex>
   )
 }
