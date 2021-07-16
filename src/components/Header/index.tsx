@@ -6,6 +6,7 @@ import { Profile } from "../Header/Profile"
 
 
 export function Header() {
+
   return (
     <Flex
       as='header'
@@ -19,14 +20,10 @@ export function Header() {
       flexDirection='row'
     >
       <Logo />
-
-
       <Anchors />
-
       <Flex align="center" ml='auto'>
         <NotificationsNav />
       </Flex>
-
       <Profile />
     </Flex>
   )

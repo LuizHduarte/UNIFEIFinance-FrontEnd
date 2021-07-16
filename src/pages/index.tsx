@@ -1,10 +1,21 @@
 import { Flex, Button, Stack } from '@chakra-ui/react';
+import Router from "next/router";
 import React from 'react';
+import { useState } from 'react';
 import { Input } from '../components/Form/Input'
 
 
 
 export default function SignIn() {
+
+  const [user, setUser] = useState('');
+
+  function handlePush() {
+    localStorage.setItem('user', user)
+    Router.push('/Wallet/dashboard')
+  }
+
+
   return (
     <Flex
       w='100vw'
@@ -22,11 +33,11 @@ export default function SignIn() {
         flexDirection="column"
       >
         <Stack spacing="4">
-          <Input name="email" type='email' label="E-mail" />
+          <Input name="email" type='email' label="E-mail" value={user} onChange={e => setUser(e.target.value)} />
           <Input name="password" type='password' label="Senha" />
         </Stack>
 
-        <Button type='submit' mt='6' colorScheme='red' size='lg'>Entrar</Button>
+        <Button type='button' onClick={handlePush} mt='6' colorScheme='red' size='lg'>Entrar</Button>
       </Flex>
     </Flex>
   )

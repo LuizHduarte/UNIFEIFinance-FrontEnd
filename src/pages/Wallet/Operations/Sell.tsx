@@ -1,10 +1,10 @@
-import { Header } from "../../components/Header";
+import { Header } from "../../../components/Header";
 import { Flex, Box, Divider, Heading, VStack, HStack, SimpleGrid, Button } from '@chakra-ui/react'
-import { Sidebar } from "../../components/Sidebar";
+import { Sidebar } from "../../../components/Sidebar";
 import React from "react";
-import { Input } from "../../components/Form/Input";
-import { InputValue } from "../../components/Form/InputValue";
-import { InputQuantity } from "../../components/Form/InputQuantity";
+import { Input } from "../../../components/Form/Input";
+import { InputValue } from "../../../components/Form/InputValue";
+import { InputQuantity } from "../../../components/Form/InputQuantity";
 
 export default function SellAction() {
   return (
@@ -21,7 +21,7 @@ export default function SellAction() {
 
           <VStack spacing='8'>
             <SimpleGrid minChildWidth='240px' spacing='8' w='100%'>
-              <Input name='ticker' label='Ticker do Ativo' />
+              <Input name='ticker' label='Ticker do Ativo' maxLength={5} style={{ textTransform: "uppercase" }} />
             </SimpleGrid>
 
             <SimpleGrid minChildWidth='240px' spacing='8' w='100%'>

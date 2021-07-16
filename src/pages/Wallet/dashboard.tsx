@@ -1,10 +1,16 @@
-import { Header } from "../components/Header";
+import { Header } from "../../components/Header";
 import { Flex, SimpleGrid, Box, Text, theme } from '@chakra-ui/react'
-import { Sidebar } from "../components/Sidebar";
+import { Sidebar } from "../../components/Sidebar";
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
+
+var axios = require("axios");
+
+
 
 
 const Chart = dynamic(() => import('react-apexcharts'), { ssr: false })
+
 
 const optionsLine = {
   chart: {
@@ -60,7 +66,9 @@ const optionsLine = {
     }
   }
 }
+
 const seriesLine = [
+
   {
     name: 'Minha Carteira',
     data: [1, 0.923, 1.0589, 1.0981, 1.110, 1.265, 1.459]
@@ -75,9 +83,11 @@ const seriesLine = [
 const seriesLine2 = [
   {
     name: 'Minha Carteira',
-    data: [0, 2521, 2854, 2914, 3398, 3947, 4291]
+    data: [1, 0.923, 1.0589, 1.0981, 1.110, 1.265, 1.459]
   },
 ]
+
+
 
 
 const seriesPie = [44, 55, 13, 43]
@@ -101,7 +111,41 @@ const optionsPie = {
 
 }
 
+
+
+
 export default function Dashboard() {
+  /*
+    const [repositories, setRepositories] = useState([]);
+  
+    useEffect(() => {
+      async function loadRepositories() {
+        var options = {
+          method: 'GET',
+          url: 'https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v3/get-historical-data',
+          params: { symbol: 'ITSA4.SA', region: 'BR' },
+          headers: {
+            'x-rapidapi-key': '3c1ff8d1e3mshd92e54a16b3d8e4p139511jsnc718972a5e1c',
+            'x-rapidapi-host': 'apidojo-yahoo-finance-v1.p.rapidapi.com'
+          }
+        };
+  
+        await axios.request(options)
+          .then(function (response) {
+            response.data.prices.map((item) => {
+              setRepositories(item.adjclose);
+            });
+  
+          }).catch(function (error) {
+            console.error(error);
+          });
+      }
+      loadRepositories();
+    }, []);
+    var test = repositories
+    
+    ]
+    */
   return (
     <Flex direction='column' h='100vh'>
       <Header />

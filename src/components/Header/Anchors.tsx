@@ -5,7 +5,7 @@ export function Anchors() {
   return (
     <Box w={["2xl", '3xl']}>
       <HStack spacing='20'>
-        <NextLink href="/dashboard">
+        <NextLink href="/Wallet/dashboard">
           <Link>
             <Text fontSize={["2xl", '3xl']} fontWeight="bold" letterSpacing="tight" pl='4'>
               Carteira

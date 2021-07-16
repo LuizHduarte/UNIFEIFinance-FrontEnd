@@ -1,10 +1,10 @@
-
-import { Flex, Box, SimpleGrid, Heading, Table, Thead, Tr, Th, Checkbox, Tbody, Td, Text, Button } from '@chakra-ui/react'
+import { Flex, Box, Heading } from '@chakra-ui/react'
 import React from 'react';
-import { Header } from "../components/Header";
-import { Pagination } from '../components/Pagination';
-import { Sidebar } from "../components/Sidebar";
-import { HistoryTable } from '../components/Table';
+import { Header } from "../../components/Header";
+import { Pagination } from '../../components/Pagination';
+import { Sidebar } from "../../components/Sidebar";
+import { HistoryTable } from '../../components/Table';
+
 
 export default function history() {
   return (
